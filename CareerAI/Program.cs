@@ -110,6 +110,7 @@ while (stopper != 1)
     };
 
     // Make a single prediction on the sample data and print results
+    // Make a single prediction on the sample data and print results
     var predictionResult = MLModel1.Predict(sampleData);
 
     Console.WriteLine("Using model to make single prediction -- Comparing actual Role with predicted Role from sample data...\n\n");
@@ -135,8 +136,25 @@ while (stopper != 1)
     Console.WriteLine($"Graphics_Designing: {Graphics_Designing}");
 
 
-    Console.WriteLine($"\n\nPredicted Role: {Convert.ToInt32(predictionResult.PredictedLabel)} - {roles[Convert.ToInt32(predictionResult.PredictedLabel) - 1]}\n\n");
+    float[] probabilities = predictionResult.Score;
+    int[] topPredictions = probabilities.Select((p, i) => new { Probability = p, Index = i })
+                                        .OrderByDescending(x => x.Probability)
+                                        .Take(5)
+                                        .Select(x => x.Index)
+                                        .ToArray();
+
+    Console.WriteLine("\n\nTop 5 Predicted Roles:");
+
+    foreach (int i in topPredictions)
+    {
+        string predictedRole = roles[i];
+        float probability = probabilities[i];
+        Console.WriteLine($"\nPredicted Role: {predictedRole}");
+        Console.WriteLine($"Probability: {string.Format("{0:P2}", probability)}");
+    }
 
     Console.WriteLine("\nInput more? \n0 - Yes \n1 - No \n");
     stopper = Convert.ToInt32(Console.ReadLine());
+
+
 }
