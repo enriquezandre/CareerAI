@@ -8,7 +8,7 @@ using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
 using Microsoft.ML;
 
-namespace Career_AI
+namespace CareerAI
 {
     public partial class MLModel1
     {

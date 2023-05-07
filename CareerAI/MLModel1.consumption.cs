@@ -5,7 +5,7 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-namespace Career_AI
+namespace CareerAI
 {
     public partial class MLModel1
     {
