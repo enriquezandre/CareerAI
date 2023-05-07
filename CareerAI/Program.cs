@@ -149,12 +149,10 @@ while (stopper != 1)
     {
         string predictedRole = roles[i];
         float probability = probabilities[i];
-        Console.WriteLine($"\nPredicted Role:{i + 1} - {predictedRole}");
+        Console.WriteLine($"\nPredicted Role: {i + 1} - {predictedRole}");
         Console.WriteLine($"Probability: {string.Format("{0:P2}", probability)}");
     }
 
     Console.WriteLine("\nInput more? \n0 - Yes \n1 - No \n");
     stopper = Convert.ToInt32(Console.ReadLine());
-
-
 }
