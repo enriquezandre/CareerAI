@@ -3,26 +3,106 @@
 
 using MLModel1_ConsoleApp1;
 
+string[] roles = new string[] { "Database Administrator",
+    "Hardware Engineer",
+    "Application Support Engineer",
+    "Cyber Security Specialist",
+    "Networking Engineer",
+    "Software Developer",
+    "API Specialist",
+    "Project Manager",
+    "Information Security Specialist",
+    "Technical Writer",
+    "AI ML Specialist",
+    "Software tester",
+    "Business Analyst",
+    "Customer Service Executive",
+    "Data Scientist",
+    "Helpdesk Engineer",
+    "Graphics Designer"
+};
+
+Console.WriteLine("Legend: Skills" +
+    "\n 0 - Not Interested" +
+    "\n 1 - Poor" +
+    "\n 2 - Beginner" +
+    "\n 3 - Average" +
+    "\n 4 - Intermediate" +
+    "\n 5 - Excellent" +
+    "\n 6 - Professional \n" +
+    "\n Enter your skill level for each of the following skills: \n");
+
+Console.Write("Input Skill Level for Database_Fundamentals: ");
+int Database_Fundamentals = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Computer_Architecture: ");
+int Computer_Architecture = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Distributed_Computing_Systems: ");
+int Distributed_Computing_Systems = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Cyber_Security: ");
+int Cyber_Security = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Networking: ");
+int Networking = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Software_Development: ");
+int Software_Development = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Programming_Skills: ");
+int Programming_Skills = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Project_Management: ");
+int Project_Management = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Computer_Forensics_Fundamentals: ");
+int Computer_Forensics_Fundamentals = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Technical_Communication: ");
+int Technical_Communication = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for AI_ML: ");
+int AI_ML = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Software_Engineering: ");
+int Software_Engineering = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Business_Analysis: ");
+int Business_Analysis = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Communication_skills: ");
+int Communication_skills = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Data_Science: ");
+int Data_Science = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Troubleshooting_skills: ");
+int Troubleshooting_skills = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input Skill Level for Graphics_Designing: ");
+int Graphics_Designing = Convert.ToInt32(Console.ReadLine());
+
 // Create single instance of sample data from first line of dataset for model input
 MLModel1.ModelInput sampleData = new MLModel1.ModelInput()
 {
-    Database_Fundamentals = 4F,
-    Computer_Architecture = 4F,
-    Distributed_Computing_Systems = 4F,
-    Cyber_Security = 4F,
-    Networking = 4F,
-    Software_Development = 3F,
-    Programming_Skills = 4F,
-    Project_Management = 4F,
-    Computer_Forensics_Fundamentals = 4F,
-    Technical_Communication = 4F,
-    AI_ML = 4F,
-    Software_Engineering = 4F,
-    Business_Analysis = 4F,
-    Communication_skills = 4F,
-    Data_Science = 4F,
-    Troubleshooting_skills = 6F,
-    Graphics_Designing = 4F,
+    Database_Fundamentals = Database_Fundamentals,
+    Computer_Architecture = Computer_Architecture,
+    Distributed_Computing_Systems = Distributed_Computing_Systems,
+    Cyber_Security = Cyber_Security,
+    Networking = Networking,
+    Software_Development = Software_Development,
+    Programming_Skills = Programming_Skills,
+    Project_Management = Project_Management,
+    Computer_Forensics_Fundamentals = Computer_Forensics_Fundamentals,
+    Technical_Communication = Technical_Communication,
+    AI_ML = AI_ML,
+    Software_Engineering = Software_Engineering,
+    Business_Analysis = Business_Analysis,
+    Communication_skills = Communication_skills,
+    Data_Science = Data_Science,
+    Troubleshooting_skills = Troubleshooting_skills,
+    Graphics_Designing = Graphics_Designing,
 };
 
 // Make a single prediction on the sample data and print results
@@ -30,28 +110,28 @@ var predictionResult = MLModel1.Predict(sampleData);
 
 Console.WriteLine("Using model to make single prediction -- Comparing actual Role with predicted Role from sample data...\n\n");
 
+Console.WriteLine("Your inputs: \n\n");
 
-Console.WriteLine($"Database_Fundamentals: {4F}");
-Console.WriteLine($"Computer_Architecture: {4F}");
-Console.WriteLine($"Distributed_Computing_Systems: {4F}");
-Console.WriteLine($"Cyber_Security: {4F}");
-Console.WriteLine($"Networking: {4F}");
-Console.WriteLine($"Software_Development: {3F}");
-Console.WriteLine($"Programming_Skills: {4F}");
-Console.WriteLine($"Project_Management: {4F}");
-Console.WriteLine($"Computer_Forensics_Fundamentals: {4F}");
-Console.WriteLine($"Technical_Communication: {4F}");
-Console.WriteLine($"AI_ML: {4F}");
-Console.WriteLine($"Software_Engineering: {4F}");
-Console.WriteLine($"Business_Analysis: {4F}");
-Console.WriteLine($"Communication_skills: {4F}");
-Console.WriteLine($"Data_Science: {4F}");
-Console.WriteLine($"Troubleshooting_skills: {6F}");
-Console.WriteLine($"Graphics_Designing: {4F}");
-Console.WriteLine($"Role: {16F}");
+Console.WriteLine($"Database_Fundamentals: {Database_Fundamentals}");
+Console.WriteLine($"Computer_Architecture: {Computer_Architecture}");
+Console.WriteLine($"Distributed_Computing_Systems: {Distributed_Computing_Systems}");
+Console.WriteLine($"Cyber_Security: {Cyber_Security}");
+Console.WriteLine($"Networking: {Networking}");
+Console.WriteLine($"Software_Development: {Software_Development}");
+Console.WriteLine($"Programming_Skills: {Programming_Skills}");
+Console.WriteLine($"Project_Management: {Project_Management}");
+Console.WriteLine($"Computer_Forensics_Fundamentals: {Computer_Forensics_Fundamentals}");
+Console.WriteLine($"Technical_Communication: {Technical_Communication}");
+Console.WriteLine($"AI_ML: {AI_ML}");
+Console.WriteLine($"Software_Engineering: {Software_Engineering}");
+Console.WriteLine($"Business_Analysis: {Business_Analysis}");
+Console.WriteLine($"Communication_skills: {Communication_skills}");
+Console.WriteLine($"Data_Science: {Data_Science}");
+Console.WriteLine($"Troubleshooting_skills: {Troubleshooting_skills}");
+Console.WriteLine($"Graphics_Designing: {Graphics_Designing}");
 
 
-Console.WriteLine($"\n\nPredicted Role: {predictionResult.PredictedLabel}\n\n");
+Console.WriteLine($"\n\nPredicted Role: {Convert.ToInt32(predictionResult.PredictedLabel)} - {roles[Convert.ToInt32(predictionResult.PredictedLabel) - 1]}\n\n");
 Console.WriteLine("=============== End of process, hit any key to finish ===============");
 Console.ReadKey();
 
