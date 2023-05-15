@@ -9,7 +9,7 @@ using Microsoft.ML.Trainers.FastTree;
 using Microsoft.ML.Trainers;
 using Microsoft.ML;
 
-namespace CareerAI
+namespace MLModel1_WebApi
 {
     public partial class MLModel1
     {
