@@ -46,9 +46,7 @@ function App() {
     data_Science: 0,
     troubleshooting_skills: 0,
     graphics_Designing: 0,
-});
-
-
+  }); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,12 +58,11 @@ function App() {
         setPredictedSkill(skills[response.data.predictedLabel - 1]);
     })
     .catch(error => console.log("Something went wrong"));
-
   }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    const parsedValue = parseInt(value, 10); // Parse the value as an integer
+    const parsedValue = parseInt(value, 10);
   
     setFormData({
       ...formData,
