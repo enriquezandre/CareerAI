@@ -62,7 +62,7 @@ function App() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    const parsedValue = parseInt(value, 10);
+    const parsedValue = parseInt(value);
   
     setFormData({
       ...formData,
@@ -77,6 +77,8 @@ function App() {
         <label>
           Database Fundamentals: 
           <input
+            min = '0'
+            max = '7'
             type = "number"
             name='database_Fundamentals'
             value = {formData.database_Fundamentals}
