@@ -1,12 +1,14 @@
 import React from 'react'
-import Skill from './components/Skill'
-import Sidebar from './components/Sidebar'
+import './App.css'
+import Sidebar from './components/Sidebar'  
+import Navigationbar from './components/NavigationBar'
 
 function App() {
   return (
-    <>
-      <Skill />
-    </>
+    <div className='App'>
+      <Navigationbar />
+      <Sidebar />
+    </div>
   )
 }
 

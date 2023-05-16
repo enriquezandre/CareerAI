@@ -1,0 +1,20 @@
+.color-nav{
+    background: #2b2e3d
+  }
+
+  nav.navbar .navbar-brand{
+    font-family: 'Trebuchet MS';
+    font-size: 4rem;
+    background: white;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: white;
+    padding-left: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.menu{
+    font-size: 1.20rem;
+    margin-left: 10%;
+}
+
+  
