@@ -15,8 +15,14 @@ import ChatIcon from '@mui/icons-material/Chat';
 import DataThresholdingIcon from '@mui/icons-material/DataThresholding';
 import TroubleshootIcon from '@mui/icons-material/Troubleshoot';
 import BrushIcon from '@mui/icons-material/Brush';
+import HomeIcon from '@mui/icons-material/Home';
 
 export const SidebarData =  [
+  {
+    title: 'Home',
+    icon: <HomeIcon />,
+    link: '/'
+  },
   {
     title: 'Database Fundamentals',
     icon: <StorageIcon />,
@@ -25,82 +31,81 @@ export const SidebarData =  [
   {
     title: 'Computer Architecture',
     icon: <DeveloperBoardIcon />,
-    link: '/home'
+    link: '/computerarchitecture'
   },
   {
     title: 'Distributed Computing Systems',
     icon: <HubIcon />,
-    link: '/home'
+    link: '/distributedcomputingsystems'
   },
   {
     title: 'Cyber Security',
     icon: <GppGoodIcon />,
-    link: '/home'
+    link: '/cybersecurity'
   },
   {
     title: 'Networking',
     icon:  <LanIcon />,
-    link: '/home'
+    link: '/networking'
   },
   {
     title: 'Software Development',
     icon:  <WebIcon />,
-    link: '/home'
+    link: '/softwaredevelopment'
   },
   {
     title: 'Programming Skills',
     icon: <CodeIcon />,
-    link: '/home'
+    link: '/programmingskills'
   },
   {
     title: 'Project Management',
     icon: <SourceIcon />,
-    link: '/home'
+    link: '/projectmanagement'
   },
   {
     title: 'Computer Forensics Fundamentals',
     icon: <SaveIcon />,
-    link: '/home'
+    link: '/computerforensicsfundamentals'
   },
   {
     title: 'Technical Communication',
     icon: <ForumIcon />,
-    link: '/home'
+    link: '/technicalcommunication'
   },
   {
     title: 'AI Machine Learning',
     icon: <TerminalIcon />,
-    link: '/home'
+    link: '/aimachinelearning'
   },
   {
     title: 'Software Engineering',
     icon: <DvrIcon />,
-    link: '/home'
+    link: '/softwareengineering'
   },
   {
     title: 'Business Analysis',
     icon: <BusinessIcon />,
-    link: '/home'
+    link: '/businessanalysis'
   },
   {
     title: 'Communication skills',
     icon: <ChatIcon />,
-    link: '/home'
+    link: '/communicationskills'
   },
   {
     title: 'Data Science',
     icon: <DataThresholdingIcon />,
-    link: '/home'
+    link: '/datascience'
   },
   {
     title: 'Troubleshooting skills',
     icon: <TroubleshootIcon />,
-    link: '/home'
+    link: '/troubleshootingskills'
   },
   {
     title: 'Graphics Designing',
     icon: <BrushIcon />,
-    link: '/home'
+    link: '/graphicsdesigning'
   }
-
 ]
