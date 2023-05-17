@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function SoftDev() {
   return (
-    <div>SoftDev</div>
+    <div className='topic'>Software Developing</div>
   )
 }
 

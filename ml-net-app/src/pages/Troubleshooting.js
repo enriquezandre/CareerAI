@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function Troubleshooting() {
   return (
-    <div>Troubleshooting</div>
+    <div className='topic'>Troubleshooting Skills</div>
   )
 }
 

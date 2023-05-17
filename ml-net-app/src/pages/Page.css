@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+.topic{
+    padding: 20px;
+    color: antiquewhite;
+    font-family: 'Space Mono', monospace;
+    font-size: 50px;
+}

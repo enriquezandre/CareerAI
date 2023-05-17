@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function AIML() {
   return (
-    <div>AIML</div>
+    <div className='topic'>AI Machine Learning</div>
   )
 }
 

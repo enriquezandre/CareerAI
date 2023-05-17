@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function ProjMgmt() {
   return (
-    <div>ProjMgmt</div>
+    <div className='topic'>Project Management</div>
   )
 }
 

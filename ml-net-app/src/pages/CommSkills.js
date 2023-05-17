@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function CommSkills() {
   return (
-    <div>CommSkills</div>
+    <div className='topic'>Communication Skills</div>
   )
 }
 

@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function DataScience() {
   return (
-    <div>DataScience</div>
+    <div className='topic'>Data Science</div>
   )
 }
 

@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function Networking() {
   return (
-    <div>Networking</div>
+    <div className='topic'>Networking</div>
   )
 }
 

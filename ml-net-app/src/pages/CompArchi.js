@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function CompArchi() {
   return (
-    <div>CompArchi</div>
+    <div className='topic'>Computer Architecture</div>
   )
 }
 

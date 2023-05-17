@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function GraphicsDesigning() {
   return (
-    <div>GraphicsDesigning</div>
+    <div className='topic'>Graphics Designing</div>
   )
 }
 

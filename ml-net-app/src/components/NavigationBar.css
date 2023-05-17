@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 .color-nav{
     background: #2b2e3d
   }
 
   nav.navbar .navbar-brand{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 4rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 3rem;
     background: white;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: white;

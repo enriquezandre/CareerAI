@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function DistCompSystems() {
   return (
-    <div>DistCompSystems</div>
+    <div className='topic'>Distributed Computer Systems</div>
   )
 }
 

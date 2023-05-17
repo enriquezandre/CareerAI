@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function TechCommu() {
   return (
-    <div>TechCommu</div>
+    <div className='topic'>Technical Communication</div>
   )
 }
 

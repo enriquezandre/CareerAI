@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function BusinessAnalysis() {
   return (
-    <div>BusinessAnalysis</div>
+    <div className='topic'>Business Analysis</div>
   )
 }
 

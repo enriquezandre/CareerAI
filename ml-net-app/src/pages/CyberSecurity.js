@@ -1,8 +1,9 @@
 import React from 'react'
+import './Page.css'
 
 function CyberSecurity() {
   return (
-    <div>CyberSecurity</div>
+    <div className='topic'>Cyber Security</div>
   )
 }
 

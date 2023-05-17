@@ -2,7 +2,7 @@ import React from 'react'
 
 function DbFundamentals() {
   return (
-    <div>DbFundamentals</div>
+    <div className='topic'>Database Fundamentals</div>
   )
 }
 
