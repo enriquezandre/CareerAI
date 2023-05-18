@@ -13,3 +13,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 18px;
 }
+
+.gradient-link {
+    background: linear-gradient(to bottom right, #abb5e6, #ee94e8, #FFCC70); /* Replace with your desired gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

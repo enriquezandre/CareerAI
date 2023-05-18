@@ -18,6 +18,7 @@ import DataScience from '../pages/DataScience';
 import Troubleshooting from '../pages/Troubleshooting';
 import GraphicsDesigning from '../pages/GraphicsDesigning';
 import Skill from './Skill'
+import RoleResult from '../pages/RoleResult';
 
 function RoutesPath() {
   return (
@@ -41,6 +42,7 @@ function RoutesPath() {
             <Route path="/datascience" element={<DataScience/>}/>
             <Route path="/troubleshootingskills" element={<Troubleshooting/>}/>
             <Route path="/graphicsdesigning" element={<GraphicsDesigning/>}/>
+            <Route path="/roleresult" element={<RoleResult/>}/>
             <Route path="/skill" element={<Skill/>}/>
           </Routes>
     </div>

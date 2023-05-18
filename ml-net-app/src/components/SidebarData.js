@@ -16,6 +16,7 @@ import DataThresholdingIcon from '@mui/icons-material/DataThresholding';
 import TroubleshootIcon from '@mui/icons-material/Troubleshoot';
 import BrushIcon from '@mui/icons-material/Brush';
 import HomeIcon from '@mui/icons-material/Home';
+import RoleIcon from '@mui/icons-material/AccessibilityNew';
 
 export const SidebarData =  [
   {
@@ -107,6 +108,11 @@ export const SidebarData =  [
     title: 'Graphics Designing',
     icon: <BrushIcon />,
     link: '/graphicsdesigning'
+  },
+  {
+    title: 'Role Result',
+    icon: <RoleIcon />,
+    link: '/roleresult'
   },
   {
   }
