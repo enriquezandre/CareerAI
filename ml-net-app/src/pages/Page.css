@@ -4,4 +4,12 @@
     color: antiquewhite;
     font-family: 'Space Mono', monospace;
     font-size: 50px;
+    margin-left: 300px;
+}
+
+.desc{
+    padding: 20px;
+    color: antiquewhite;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
 }

@@ -107,5 +107,7 @@ export const SidebarData =  [
     title: 'Graphics Designing',
     icon: <BrushIcon />,
     link: '/graphicsdesigning'
+  },
+  {
   }
 ]

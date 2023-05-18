@@ -1,7 +1,10 @@
 .Sidebar{
-    height: 100%;
+    height: calc(100vh - 30px);
     width: 300px;
     background: #2b2e3d;
+    position: fixed;
+    overflow-y: auto;
+    margin-bottom: 30px;
   }
   
   .SidebarList {
