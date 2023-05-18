@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Page.css'
+import { ValuesContext } from './ValuesContext'
+import { useNavigate } from 'react-router-dom';
 
 function DistCompSystems() {
+  const { values, setValues } = useContext(ValuesContext);
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    setValues(prevValues => ({
+      ...prevValues,
+      distributed_Computing_Systems: event.target.value,
+    }));
+    navigate("/cybersecurity");
+  };
   return (
     <>
     <div className="Content">
@@ -13,6 +25,11 @@ function DistCompSystems() {
             <a href="https://www.proprofs.com/quiz-school/story.php?title=mjmzmdkwnwrxjm" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
+        <input
+            type="number"
+            value={values.distributed_Computing_Systems || ''} // Read the value from the context state
+            onChange={handleInputChange}
+          />
       </div>
     </div>
     </>

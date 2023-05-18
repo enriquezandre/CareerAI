@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Page.css'
+import { ValuesContext } from './ValuesContext' 
+import { useNavigate } from 'react-router-dom';
 
 function BusinessAnalysis() {
+  const { values, setValues } = useContext(ValuesContext);
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    setValues(prevValues => ({
+      ...prevValues,
+      business_Analysis: event.target.value,
+    }));
+    navigate("/communicationskills");
+  };
   return (
     <>
     <div className="Content">
@@ -13,6 +25,11 @@ function BusinessAnalysis() {
             <a href="https://www.linkedin.com/skill-assessments/Google%20Analytics/quiz-intro/" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
+        <input
+            type="number"
+            value={values.business_Analysis || ''} // Read the value from the context state
+            onChange={handleInputChange}
+          />
       </div>
     </div>
     </>

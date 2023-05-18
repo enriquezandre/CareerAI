@@ -22,7 +22,7 @@ function Skill() {
         "Data Scientist",
         "Helpdesk Engineer",
         "Graphics Designer",
-        "Null"
+        "Null" 
       ];
       
       const [predictedSkill, setPredictedSkill] = useState("");

@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Page.css'
+import { ValuesContext } from './ValuesContext'
+import { useNavigate } from 'react-router-dom';
+
 
 function ProgSkills() {
+  const { values, setValues } = useContext(ValuesContext);
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    setValues(prevValues => ({
+      ...prevValues,
+      programming_Skills: event.target.value,
+    }));
+    navigate("/projectmanagement");
+  };
   return (
     <>
     <div className="Content">
@@ -13,6 +26,11 @@ function ProgSkills() {
             <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
+        <input
+            type="number"
+            value={values.programming_Skills || ''} // Read the value from the context state
+            onChange={handleInputChange}
+          />
       </div>
     </div>
     </>

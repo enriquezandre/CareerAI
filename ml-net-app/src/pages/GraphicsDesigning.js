@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Page.css'
+import { ValuesContext } from './ValuesContext'
+import { useNavigate } from 'react-router-dom';
 
 function GraphicsDesigning() {
+  const { values, setValues } = useContext(ValuesContext);
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    setValues(prevValues => ({
+      ...prevValues,
+      graphics_Designing: event.target.value,
+    }));
+    navigate("/roleresult");
+  };
   return (
     <>
     <div className="Content">
@@ -13,6 +25,11 @@ function GraphicsDesigning() {
             <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
+        <input
+            type="number"
+            value={values.graphics_Designing || ''} // Read the value from the context state
+            onChange={handleInputChange}
+          />
       </div>
     </div>
     </>

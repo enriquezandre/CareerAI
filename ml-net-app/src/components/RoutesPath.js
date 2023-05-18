@@ -19,10 +19,12 @@ import Troubleshooting from '../pages/Troubleshooting';
 import GraphicsDesigning from '../pages/GraphicsDesigning';
 import Skill from './Skill'
 import RoleResult from '../pages/RoleResult';
+import ValuesProvider from '../pages/ValuesProvider';
 
 function RoutesPath() {
   return (
     <div>
+      <ValuesProvider> 
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/databasefundamentals" element={<DbFundamentals/>}/>
@@ -45,6 +47,7 @@ function RoutesPath() {
             <Route path="/roleresult" element={<RoleResult/>}/>
             <Route path="/skill" element={<Skill/>}/>
           </Routes>
+        </ValuesProvider>
     </div>
   )
 }

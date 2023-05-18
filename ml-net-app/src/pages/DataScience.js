@@ -1,7 +1,19 @@
-import React from 'react'
+import { ValuesContext } from './ValuesContext'
+import { useNavigate } from 'react-router-dom';
+import React, { useContext } from 'react'
 import './Page.css'
 
 function DataScience() {
+  const { values, setValues } = useContext(ValuesContext);
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    setValues(prevValues => ({
+      ...prevValues,
+      data_Science: event.target.value,
+    }));
+    navigate("/troubleshootingskills");
+  };
   return (
     <>
     <div className="Content">
@@ -13,6 +25,11 @@ function DataScience() {
             <a href="https://www.interviewquery.com/challenges/900e86ef-f4b1-11eb-8e37-02b7f35cb379" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
+        <input
+            type="number"
+            value={values.data_Science || ''} // Read the value from the context state
+            onChange={handleInputChange}
+          />
       </div>
     </div>
     </>

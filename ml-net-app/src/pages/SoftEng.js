@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Page.css'
+import { ValuesContext } from './ValuesContext' 
+import { useNavigate } from 'react-router-dom';
 
 function SoftEng() {
+  const { values, setValues } = useContext(ValuesContext);
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    setValues(prevValues => ({
+      ...prevValues,
+      software_Engineering: event.target.value,
+    }));
+    navigate("/businessanalysis");
+  };
   return (
     <>
     <div className="Content">
@@ -13,6 +25,11 @@ function SoftEng() {
             <a href="https://www.hackerrank.com/test/9m6d5efstnm" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
+        <input
+            type="number"
+            value={values.software_Engineering || ''} // Read the value from the context state
+            onChange={handleInputChange}
+          />
       </div>
     </div>
     </>
