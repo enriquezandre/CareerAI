@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 
 function Sidebar() {
-  const location = useLocation();// then inside your component:
+  const location = useLocation();
   const navigate = useNavigate();
 
   return (
@@ -18,7 +18,6 @@ function Sidebar() {
               className='row'
               id={location.pathname === val.link ? "active" : ""}
               onClick={() => {
-                // Navigate to the new page without causing a full page reload
                 navigate(val.link);
               }}
             >
