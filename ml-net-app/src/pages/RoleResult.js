@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ValuesContext } from "./ValuesContext";
 import axios from "axios";
+import "./Page.css";
 
 function RoleResult({ value }) {
   const { values } = useContext(ValuesContext);
@@ -116,7 +117,7 @@ function RoleResult({ value }) {
             <br />
             Graphics Designing: {values.graphics_Designing}
           </p>
-          <button onClick={handleEnter}>Click meh</button>
+          <button className="show-result-button" onClick={handleEnter}>Show Result</button>
           <h2>ROLE: {label} {roles[label - 1]}</h2>
           <p>ROLE DESCRIPTION: {description[label - 1]}</p>
         </div>
