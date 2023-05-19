@@ -67,11 +67,10 @@ function RoleResult({ value }) {
     "A Data Scientist utilizes statistical analysis, data mining, and programming skills to collect, analyze, and interpret large datasets. They then use this information to develop data-driven solutions to complex business challenges. They're often involved in making predictions, understanding customer behavior, and providing actionable insights to stakeholders, thus helping to guide strategic decision-making within the organization.",
     "A Helpdesk Engineer is a technical professional who provides support and assistance to individuals experiencing computer problems. They diagnose hardware and software issues, perform troubleshooting, manage network configurations, and guide users through step-by-step solutions, often remotely. Their ultimate goal is to help users overcome technical issues and ensure optimal system performance and reliability.",
     "A Graphic Designer is responsible for creating visual concepts to communicate ideas that inspire, inform, or captivate consumers. They design graphics for various media such as websites, logos, advertisements, product packaging, and more. Using both manual and computer software skills, they develop the overall layout and production design to enhance the visual appeal and effectiveness of the message.",
-    "Did not follow legend"
+    "Did not follow legend",
   ];
 
   const [label, setPredictedLabel] = useState();
-  
 
   const handleEnter = async () => {
     await axios
@@ -87,54 +86,58 @@ function RoleResult({ value }) {
       <div className="Content">
         <div className="roletopic">
           <div className="left-column">
-          Role Result
-          <p className="roledesc">
-            Database Fundamentals: {values.database_Fundamentals}
-            <br />
-            Computer Architecture: {values.computer_Architecture}
-            <br />
-            Distributed Computing Systems: {values.distributed_Computing_Systems}
-            <br />
-            Cyber Security: {values.cyber_Security}
-            <br />
-            Networking: {values.networking}
-            <br />
-            Software Development: {values.software_Development}
-            <br />
-            Programming Skills: {values.programming_Skills}
-            <br />
-            Project Management: {values.project_Management}
-            <br />
-            Computer Forensics Fundamentals: {values.computer_Forensics_Fundamentals}
-            <br />
-            Technical Communication: {values.technical_Communication}
-            <br />
-            AI Machine Learning: {values.aI_ML}
-            <br />
-            Software Engineering: {values.software_Engineering}
-            <br />
-            Business Analysis: {values.business_Analysis}
-            <br />
-            Communication Skills: {values.communication_skills}
-            <br />
-            Data Science: {values.data_Science}
-            <br />
-            Troubleshooting Skills: {values.troubleshooting_skills}
-            <br />
-            Graphics Designing: {values.graphics_Designing}
-          </p>
-          <button className="show-result-button" onClick={handleEnter}>Show Result</button>
-          <button className="show-result-button" onClick={backToHome}>Back to Home</button>
+            Role Result
+            <p className="roledesc">
+              Database Fundamentals: {values.database_Fundamentals}
+              <br />
+              Computer Architecture: {values.computer_Architecture}
+              <br />
+              Distributed Computing Systems:{" "}
+              {values.distributed_Computing_Systems}
+              <br />
+              Cyber Security: {values.cyber_Security}
+              <br />
+              Networking: {values.networking}
+              <br />
+              Software Development: {values.software_Development}
+              <br />
+              Programming Skills: {values.programming_Skills}
+              <br />
+              Project Management: {values.project_Management}
+              <br />
+              Computer Forensics Fundamentals:{" "}
+              {values.computer_Forensics_Fundamentals}
+              <br />
+              Technical Communication: {values.technical_Communication}
+              <br />
+              AI Machine Learning: {values.aI_ML}
+              <br />
+              Software Engineering: {values.software_Engineering}
+              <br />
+              Business Analysis: {values.business_Analysis}
+              <br />
+              Communication Skills: {values.communication_skills}
+              <br />
+              Data Science: {values.data_Science}
+              <br />
+              Troubleshooting Skills: {values.troubleshooting_skills}
+              <br />
+              Graphics Designing: {values.graphics_Designing}
+            </p>
+            <button className="show-result-button" onClick={handleEnter}>
+              Show Result
+            </button>
+            <button className="show-result-button" onClick={backToHome}>
+              Back to Home
+            </button>
           </div>
           <div className="right-column">
             <div className="roleresult">
-            <div className='rolelabel'>
-              ROLE: {label} {roles[label - 1]}
-              <br />
-              <p className='roledesc'>
-              {description[label - 1]}
-              </p>
-            </div>
+              <div className="rolelabel">
+                ROLE: {label} {roles[label - 1]}
+                <br />
+                <p className="roledesc">{description[label - 1]}</p>
+              </div>
             </div>
           </div>
         </div>
