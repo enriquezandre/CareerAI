@@ -7,7 +7,7 @@ function Home() {
     <>
     <div className="Content">
       <div className='topic'>
-        5.0 lang ser
+        Start  your journey here!
         <p className='desc'>
             CareerAI is an innovative Machine Learning application designed to help people who are trying to pursue their ideal career path within the IT industry.  
             This application will provide personalized recommendations based on your unique skill set and interests in the field.
