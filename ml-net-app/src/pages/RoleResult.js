@@ -82,63 +82,39 @@ function RoleResult({ value }) {
         <div className="topic">
           Role Result
           <p className="desc">
-            The value from Data Science skill is: {values.database_Fundamentals}
-          </p>
-          <p className="desc">
-            The value from TroubleShooting skill is:{" "}
-            {values.computer_Architecture}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is:{" "}
-            {values.distributed_Computing_Systems}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is: {values.cyber_Security}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is: {values.networking}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is:{" "}
-            {values.software_Development}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is: {values.programming_Skills}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is: {values.project_Management}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is:{" "}
-            {values.computer_Forensics_Fundamentals}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is:{" "}
-            {values.technical_Communication}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is: {values.aI_ML}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is:{" "}
-            {values.software_Engineering}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is: {values.business_Analysis}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is:{" "}
-            {values.communication_skills}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is: {values.data_Science}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is:{" "}
-            {values.troubleshooting_skills}
-          </p>
-          <p className="desc">
-            The value from Graphics Design skill is: {values.graphics_Designing}
+            Database Fundamentals: {values.database_Fundamentals}
+            <br />
+            Computer Architecture: {values.computer_Architecture}
+            <br />
+            Distributed Computing Systems: {values.distributed_Computing_Systems}
+            <br />
+            Cyber Security: {values.cyber_Security}
+            <br />
+            Networking: {values.networking}
+            <br />
+            Software Development: {values.software_Development}
+            <br />
+            Programming Skills: {values.programming_Skills}
+            <br />
+            Project Management: {values.project_Management}
+            <br />
+            Computer Forensics Fundamentals: {values.computer_Forensics_Fundamentals}
+            <br />
+            Technical Communication: {values.technical_Communication}
+            <br />
+            AI Machine Learning: {values.aI_ML}
+            <br />
+            Software Engineering: {values.software_Engineering}
+            <br />
+            Business Analysis: {values.business_Analysis}
+            <br />
+            Communication Skills: {values.communication_skills}
+            <br />
+            Data Science: {values.data_Science}
+            <br />
+            Troubleshooting Skills: {values.troubleshooting_skills}
+            <br />
+            Graphics Designing: {values.graphics_Designing}
           </p>
           <button onClick={handleEnter}>Click meh</button>
           <h2>ROLE: {label} {roles[label - 1]}</h2>
