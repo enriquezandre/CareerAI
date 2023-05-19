@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
+import InputButton from '../components/InputButton'
 
 function CompForensics() {
   const { values, setValues } = useContext(ValuesContext);
@@ -12,8 +13,12 @@ function CompForensics() {
       ...prevValues,
       computer_Forensics_Fundamentals: event.target.value,
     }));
+  };
+
+  const handleNext = () => {
     navigate("/technicalcommunication");
   };
+
   return (
     <>
     <div className="Content">
@@ -25,11 +30,20 @@ function CompForensics() {
             <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
-        <input
-            type="number"
-            value={values.computer_Forensics_Fundamentals || ''} // Read the value from the context state
-            onChange={handleInputChange}
+        <InputButton
+            number={values.computer_Forensics_Fundamentals || 0} // Pass the value from the context state as the 'number' prop
+            onIncrement={() => {
+              if (values.computer_Forensics_Fundamentals < 10) {
+                handleInputChange({ target: { value: parseInt(values.computer_Forensics_Fundamentals || 0) + 1 } });
+              }
+            }}
+            onDecrement={() => {
+              if (values.computer_Forensics_Fundamentals > 0) {
+                handleInputChange({ target: { value: parseInt(values.computer_Forensics_Fundamentals || 0) - 1 } });
+              }
+            }}
           />
+          <button className="next-button" onClick={handleNext}>Next</button>
       </div>
     </div>
     </>

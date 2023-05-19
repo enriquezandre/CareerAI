@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
+import InputButton from '../components/InputButton'
 
 function Networking() {
   const { values, setValues } = useContext(ValuesContext);
@@ -12,8 +13,12 @@ function Networking() {
       ...prevValues,
       networking: event.target.value,
     }));
+  };
+
+  const handleNext = () => {
     navigate("/softwaredevelopment");
   };
+
   return (
     <>
     <div className="Content">
@@ -25,11 +30,20 @@ function Networking() {
             <a href="https://www.proprofs.com/quiz-school/story.php?title=nje5ode5vs0p" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
-        <input
-            type="number"
-            value={values.networking || ''} // Read the value from the context state
-            onChange={handleInputChange}
+        <InputButton
+            number={values.networking || 0} // Pass the value from the context state as the 'number' prop
+            onIncrement={() => {
+              if (values.networking < 10) {
+                handleInputChange({ target: { value: parseInt(values.networking || 0) + 1 } });
+              }
+            }}
+            onDecrement={() => {
+              if (values.networking > 0) {
+                handleInputChange({ target: { value: parseInt(values.networking || 0) - 1 } });
+              }
+            }}
           />
+          <button className="next-button" onClick={handleNext}>Next</button>
       </div>
     </div>
     </>

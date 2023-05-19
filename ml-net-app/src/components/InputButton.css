@@ -1,0 +1,28 @@
+.gradient-button {
+    background: linear-gradient(to bottom right, #4158D0, #C850C0, #FFCC70);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .input-button-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-button-left,
+  .input-button-right {
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+  
+  .input-button-number {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+  

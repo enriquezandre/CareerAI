@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
+import InputButton from '../components/InputButton'
 
 function SoftDev() {
   const { values, setValues } = useContext(ValuesContext);
@@ -12,8 +13,12 @@ function SoftDev() {
       ...prevValues,
       software_Development: event.target.value,
     }));
+  };
+
+  const handleNext = () => {
     navigate("/programmingskills");
   };
+
   return (
     <>
     <div className="Content">
@@ -25,11 +30,20 @@ function SoftDev() {
             <a href="https://www.proprofs.com/quiz-school/story.php?title=pp-mjk0ntk3nqkfc6" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
-        <input
-            type="number"
-            value={values.software_Development || ''} // Read the value from the context state
-            onChange={handleInputChange}
+        <InputButton
+            number={values.software_Development || 0} // Pass the value from the context state as the 'number' prop
+            onIncrement={() => {
+              if (values.software_Development < 10) {
+                handleInputChange({ target: { value: parseInt(values.software_Development || 0) + 1 } });
+              }
+            }}
+            onDecrement={() => {
+              if (values.software_Development > 0) {
+                handleInputChange({ target: { value: parseInt(values.software_Development || 0) - 1 } });
+              }
+            }}
           />
+          <button className="next-button" onClick={handleNext}>Next</button>
       </div>
     </div>
     </>

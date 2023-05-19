@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
+import InputButton from '../components/InputButton'
 
 function Troubleshooting() {
   const { values, setValues } = useContext(ValuesContext);
@@ -12,8 +13,12 @@ function Troubleshooting() {
       ...prevValues,
       troubleshooting_skills: event.target.value,
     }));
+  };
+
+  const handleNext = () => {
     navigate("/graphicsdesigning");
   };
+  
   return (
     <>
     <div className="Content">
@@ -25,11 +30,20 @@ function Troubleshooting() {
             <a href="https://www.proprofs.com/quiz-school/story.php?title=troubleshooting-practice-quiz-1" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
-        <input
-            type="number"
-            value={values.troubleshooting_skills || ''} // Read the value from the context state
-            onChange={handleInputChange}
+        <InputButton
+            number={values.troubleshooting_skills || 0} // Pass the value from the context state as the 'number' prop
+            onIncrement={() => {
+              if (values.troubleshooting_skills < 10) {
+                handleInputChange({ target: { value: parseInt(values.troubleshooting_skills || 0) + 1 } });
+              }
+            }}
+            onDecrement={() => {
+              if (values.troubleshooting_skills > 0) {
+                handleInputChange({ target: { value: parseInt(values.troubleshooting_skills || 0) - 1 } });
+              }
+            }}
           />
+          <button className="next-button" onClick={handleNext}>Next</button>
       </div>
     </div>
     </>

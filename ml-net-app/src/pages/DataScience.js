@@ -2,6 +2,7 @@ import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
 import React, { useContext } from 'react'
 import './Page.css'
+import InputButton from '../components/InputButton'
 
 function DataScience() {
   const { values, setValues } = useContext(ValuesContext);
@@ -12,8 +13,12 @@ function DataScience() {
       ...prevValues,
       data_Science: event.target.value,
     }));
+  };
+
+  const handleNext = () => {
     navigate("/troubleshootingskills");
   };
+
   return (
     <>
     <div className="Content">
@@ -25,11 +30,20 @@ function DataScience() {
             <a href="https://www.interviewquery.com/challenges/900e86ef-f4b1-11eb-8e37-02b7f35cb379" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
         </p>
-        <input
-            type="number"
-            value={values.data_Science || ''} // Read the value from the context state
-            onChange={handleInputChange}
+        <InputButton
+            number={values.data_Science || 0} // Pass the value from the context state as the 'number' prop
+            onIncrement={() => {
+              if (values.data_Science < 10) {
+                handleInputChange({ target: { value: parseInt(values.data_Science || 0) + 1 } });
+              }
+            }}
+            onDecrement={() => {
+              if (values.data_Science > 0) {
+                handleInputChange({ target: { value: parseInt(values.data_Science || 0) - 1 } });
+              }
+            }}
           />
+          <button className="next-button" onClick={handleNext}>Next</button>
       </div>
     </div>
     </>
