@@ -2,10 +2,12 @@ import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
 import React, { useContext } from 'react'
 import './Page.css'
+import { useAutoFocus } from '../components/useAutoFocus';
 
 function DataScience() {
   const { values, setValues } = useContext(ValuesContext);
   const navigate = useNavigate();
+  const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
     setValues(prevValues => ({
@@ -27,6 +29,7 @@ function DataScience() {
           <div className='rating'>
             <input
               type="number"
+              ref={autoFocusRef}
               value={values.data_Science || ''} // Read the value from the context state
               onChange={handleInputChange}
               className="input-field"

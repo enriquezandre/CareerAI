@@ -2,10 +2,12 @@ import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
+import { useAutoFocus } from '../components/useAutoFocus';
 
 function ProgSkills() {
   const { values, setValues } = useContext(ValuesContext);
   const navigate = useNavigate();
+  const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
     setValues(prevValues => ({
@@ -39,6 +41,7 @@ function ProgSkills() {
           <div className='rating'>
             <input
               type="number"
+              ref={autoFocusRef}
               value={values.programming_Skills || ''} // Read the value from the context state
               onChange={handleInputChange}
               className="input-field"
