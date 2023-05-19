@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext' 
 import { useNavigate } from 'react-router-dom';
-import InputButton from '../components/InputButton'
 
 function AIML() {
   const { values, setValues } = useContext(ValuesContext);
@@ -13,12 +12,8 @@ function AIML() {
       ...prevValues,
       aI_ML: event.target.value,
     }));
-  };
-
-  const handleNext = () => {
     navigate("/softwareengineering");
   };
-
 
   return (
     <>
@@ -30,21 +25,16 @@ function AIML() {
           <h3>Not sure about your skills? {'  '}
             <a href="https://www.linkedin.com/skill-assessments/Machine%20Learning/quiz-intro/" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
+          <div className='rating'>
+            <input
+              type="number"
+              value={values.aI_ML || ''} // Read the value from the context state
+              onChange={handleInputChange}
+              className="input-field"
+              placeholder="Enter rate here"
+            />
+          </div>
         </p>
-        <InputButton
-            number={values.aI_ML || 0} // Pass the value from the context state as the 'number' prop
-            onIncrement={() => {
-              if (values.aI_ML < 10) {
-                handleInputChange({ target: { value: parseInt(values.aI_ML || 0) + 1 } });
-              }
-            }}
-            onDecrement={() => {
-              if (values.aI_ML > 0) {
-                handleInputChange({ target: { value: parseInt(values.aI_ML || 0) - 1 } });
-              }
-            }}
-          />
-          <button className="next-button" onClick={handleNext}>Next</button>
       </div>
     </div>
     </>

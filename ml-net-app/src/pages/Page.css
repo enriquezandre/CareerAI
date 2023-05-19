@@ -14,8 +14,34 @@
     font-size: 18px;
 }
 
+.rating{
+    margin-top: 50px;
+}
+
 .gradient-link {
-    background: linear-gradient(to bottom right, #abb5e6, #ee94e8, #FFCC70); /* Replace with your desired gradient colors */
+    background: linear-gradient(to bottom right, #abb5e6, #ee94e8, #FFCC70); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+.input-field {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: 3.5px solid;
+    border-image: linear-gradient(to bottom right, #abb5e6, #ee94e8, #FFCC70); 
+    border-image-slice: 2;
+    margin-left: 450px;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #FF00FF; 
+    box-shadow: 0 0 5px #FF00FF;
+  }
+
+.input-field::-webkit-inner-spin-button,
+.input-field::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

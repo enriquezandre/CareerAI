@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
-import InputButton from '../components/InputButton'
 
 function CyberSecurity() {
   const { values, setValues } = useContext(ValuesContext);
@@ -13,12 +12,8 @@ function CyberSecurity() {
       ...prevValues,
       cyber_Security: event.target.value,
     }));
-  };
-
-  const handleNext = () => {
     navigate("/networking");
   };
-
   return (
     <>
     <div className="Content">
@@ -29,21 +24,16 @@ function CyberSecurity() {
           <h3>Not sure about your skills? {'  '}
             <a href="https://www.linkedin.com/skill-assessments/Cybersecurity/quiz-intro/" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
+          <div className='rating'>
+            <input
+              type="number"
+              value={values.cyber_Security || ''} // Read the value from the context state
+              onChange={handleInputChange}
+              className="input-field"
+              placeholder="Enter rate here"
+            />
+          </div>
         </p>
-        <InputButton
-            number={values.cyber_Security || 0} // Pass the value from the context state as the 'number' prop
-            onIncrement={() => {
-              if (values.cyber_Security < 10) {
-                handleInputChange({ target: { value: parseInt(values.cyber_Security || 0) + 1 } });
-              }
-            }}
-            onDecrement={() => {
-              if (values.cyber_Security > 0) {
-                handleInputChange({ target: { value: parseInt(values.cyber_Security || 0) - 1 } });
-              }
-            }}
-          />
-          <button className="next-button" onClick={handleNext}>Next</button>
       </div>
     </div>
     </>

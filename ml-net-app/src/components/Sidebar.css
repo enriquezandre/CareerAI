@@ -37,10 +37,6 @@
     background: linear-gradient(to bottom right, #4158D0, #C850C0, #FFCC70);
   }
   
-  .SidebarList .active-content{
-    background: linear-gradient(to bottom right, #4158D0, #C850C0, #FFCC70);
-  }
-
   .row #icon{
     flex: 30%;
     display: grid;

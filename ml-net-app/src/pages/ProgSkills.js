@@ -2,8 +2,6 @@ import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
 import { useNavigate } from 'react-router-dom';
-import InputButton from '../components/InputButton'
-
 
 function ProgSkills() {
   const { values, setValues } = useContext(ValuesContext);
@@ -14,12 +12,8 @@ function ProgSkills() {
       ...prevValues,
       programming_Skills: event.target.value,
     }));
-  };
-
-  const handleNext = () => {
     navigate("/projectmanagement");
   };
-
   return (
     <>
     <div className="Content">
@@ -30,21 +24,16 @@ function ProgSkills() {
           <h3>Not sure about your skills? {'  '}
             <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
+          <div className='rating'>
+            <input
+              type="number"
+              value={values.programming_Skills || ''} // Read the value from the context state
+              onChange={handleInputChange}
+              className="input-field"
+              placeholder="Enter rate here"
+            />
+          </div>
         </p>
-        <InputButton
-            number={values.programming_Skills || 0} // Pass the value from the context state as the 'number' prop
-            onIncrement={() => {
-              if (values.programming_Skills < 10) {
-                handleInputChange({ target: { value: parseInt(values.programming_Skills || 0) + 1 } });
-              }
-            }}
-            onDecrement={() => {
-              if (values.programming_Skills > 0) {
-                handleInputChange({ target: { value: parseInt(values.programming_Skills || 0) - 1 } });
-              }
-            }}
-          />
-          <button className="next-button" onClick={handleNext}>Next</button>
       </div>
     </div>
     </>
