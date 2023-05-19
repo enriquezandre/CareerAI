@@ -92,15 +92,29 @@
     text-align: right;
     margin-left: auto;
     font-size: 24px;
-    text-align: center; 
   }
 
   .left-column {
-    width: 60%; 
+    width: 80%; 
   }
   
   .right-column {
-    width: 40%; 
+    width: 80%; 
     text-align: center; 
     margin-left: auto;
+  }
+
+  .rolelabel{
+    margin-left: 200px;
+    color: antiquewhite;
+    font-family: 'Space Mono', monospace;
+    font-size: 30px;
+    padding-right: 30px;
+    text-align: center;
+  }
+
+  .roledesc{
+    color: antiquewhite;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
   }

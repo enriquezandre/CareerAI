@@ -67,6 +67,7 @@ function RoleResult({ value }) {
   ];
 
   const [label, setPredictedLabel] = useState();
+  
 
   const handleEnter = async () => {
     await axios
@@ -122,9 +123,13 @@ function RoleResult({ value }) {
           </div>
           <div className="right-column">
             <div className="roleresult">
+            <div className='rolelabel'>
               ROLE: {label} {roles[label - 1]}
               <br />
-              ROLE DESCRIPTION: {description[label - 1]}
+              <p className='roledesc'>
+              {description[label - 1]}
+              </p>
+            </div>
             </div>
           </div>
         </div>
