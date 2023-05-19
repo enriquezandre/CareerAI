@@ -71,3 +71,36 @@
     box-shadow: 0 0 5px #FF00FF;
   }
   
+  .roletopic{
+    display: flex;
+    padding: 20px;
+    color: antiquewhite;
+    font-family: 'Space Mono', monospace;
+    font-size: 50px;
+    margin-left: 300px;
+}
+
+  .roledesc{
+    padding: 20px;
+    color: antiquewhite;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+  }
+
+  .roleresult {
+    flex: 1;
+    text-align: right;
+    margin-left: auto;
+    font-size: 24px;
+    text-align: center; 
+  }
+
+  .left-column {
+    width: 60%; 
+  }
+  
+  .right-column {
+    width: 40%; 
+    text-align: center; 
+    margin-left: auto;
+  }

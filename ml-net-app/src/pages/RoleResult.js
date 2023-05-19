@@ -80,9 +80,10 @@ function RoleResult({ value }) {
   return (
     <>
       <div className="Content">
-        <div className="topic">
+        <div className="roletopic">
+          <div className="left-column">
           Role Result
-          <p className="desc">
+          <p className="roledesc">
             Database Fundamentals: {values.database_Fundamentals}
             <br />
             Computer Architecture: {values.computer_Architecture}
@@ -118,8 +119,14 @@ function RoleResult({ value }) {
             Graphics Designing: {values.graphics_Designing}
           </p>
           <button className="show-result-button" onClick={handleEnter}>Show Result</button>
-          <h2>ROLE: {label} {roles[label - 1]}</h2>
-          <p>ROLE DESCRIPTION: {description[label - 1]}</p>
+          </div>
+          <div className="right-column">
+            <div className="roleresult">
+              ROLE: {label} {roles[label - 1]}
+              <br />
+              ROLE DESCRIPTION: {description[label - 1]}
+            </div>
+          </div>
         </div>
       </div>
     </>
