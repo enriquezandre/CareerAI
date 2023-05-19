@@ -5,7 +5,7 @@ import './NavigationBar.css';
 function Navigationbar() {
 
   return (
-    <Navbar className='color-nav py-3' expand="lg">
+    <Navbar className='color-nav py-3' expand="lg" fixed="top">
       <Container fluid>
         <Navbar.Brand className='navbar-brand'>CareerAI</Navbar.Brand>
       </Container>

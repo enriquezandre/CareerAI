@@ -13,9 +13,11 @@
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.menu{
-    font-size: 1.20rem;
-    margin-left: 10%;
-}
+nav.navbar {
+    position: fixed;
+    width: 100%;
+  }
 
-  
+  .main-content {
+    padding-top: 70px; /* Adjust this value to match the height of your navbar */
+  }
