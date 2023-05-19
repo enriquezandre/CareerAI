@@ -64,6 +64,7 @@ function RoleResult({ value }) {
     "A Data Scientist utilizes statistical analysis, data mining, and programming skills to collect, analyze, and interpret large datasets. They then use this information to develop data-driven solutions to complex business challenges. They're often involved in making predictions, understanding customer behavior, and providing actionable insights to stakeholders, thus helping to guide strategic decision-making within the organization.",
     "A Helpdesk Engineer is a technical professional who provides support and assistance to individuals experiencing computer problems. They diagnose hardware and software issues, perform troubleshooting, manage network configurations, and guide users through step-by-step solutions, often remotely. Their ultimate goal is to help users overcome technical issues and ensure optimal system performance and reliability.",
     "A Graphic Designer is responsible for creating visual concepts to communicate ideas that inspire, inform, or captivate consumers. They design graphics for various media such as websites, logos, advertisements, product packaging, and more. Using both manual and computer software skills, they develop the overall layout and production design to enhance the visual appeal and effectiveness of the message.",
+    "Did not follow legend"
   ];
 
   const [label, setPredictedLabel] = useState();
