@@ -5,6 +5,9 @@ import "./Page.css";
 
 function RoleResult({ value }) {
   const { values } = useContext(ValuesContext);
+  const backToHome = () => {
+    window.location.href = "/";
+  };
   const data = {
     database_Fundamentals: values.database_Fundamentals,
     computer_Architecture: values.computer_Architecture,
@@ -121,6 +124,7 @@ function RoleResult({ value }) {
             Graphics Designing: {values.graphics_Designing}
           </p>
           <button className="show-result-button" onClick={handleEnter}>Show Result</button>
+          <button className="show-result-button" onClick={backToHome}>Back to Home</button>
           </div>
           <div className="right-column">
             <div className="roleresult">
