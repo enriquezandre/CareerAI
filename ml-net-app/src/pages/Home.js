@@ -20,7 +20,7 @@ function Home() {
             <br />
             0 - Not Interested
             <br />
-            1- Poor
+            1 - Poor
             <br />
             2 - Beginner
             <br />
