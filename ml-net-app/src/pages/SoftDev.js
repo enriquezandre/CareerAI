@@ -34,10 +34,10 @@ function SoftDev() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/programmingskills"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/programmingskills"
-        ></NextButton>
       </div>
     </div>
     </>

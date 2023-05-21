@@ -34,10 +34,10 @@ function BusinessAnalysis() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/communicationskills"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/communicationskills"
-        ></NextButton>
       </div>
     </div>
     </>

@@ -34,10 +34,10 @@ function CompArchi() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/distributedcomputingsystems"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/distributedcomputingsystems"
-        ></NextButton>
       </div>
     </div>
     </>

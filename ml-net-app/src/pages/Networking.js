@@ -34,10 +34,10 @@ function Networking() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/softwaredevelopment"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/softwaredevelopment"
-        ></NextButton>
       </div>
     </div>
     </>

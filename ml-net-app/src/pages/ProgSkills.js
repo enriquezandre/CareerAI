@@ -46,10 +46,10 @@ function ProgSkills() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/projectmanagement"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/projectmanagement"
-        ></NextButton>
       </div>
     </div>
     </>

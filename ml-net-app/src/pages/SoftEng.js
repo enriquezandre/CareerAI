@@ -34,10 +34,10 @@ function SoftEng() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/businessanalysis"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/businessanalysis"
-        ></NextButton>
       </div>
     </div>
     </>

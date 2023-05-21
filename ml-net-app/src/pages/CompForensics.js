@@ -34,10 +34,10 @@ function CompForensics() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/technicalcommunication"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/technicalcommunication"
-        ></NextButton>
       </div>
     </div>
     </>

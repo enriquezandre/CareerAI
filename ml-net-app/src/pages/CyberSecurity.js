@@ -34,10 +34,10 @@ function CyberSecurity() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/networking"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/networking"
-        ></NextButton>
       </div>
     </div>
     </>

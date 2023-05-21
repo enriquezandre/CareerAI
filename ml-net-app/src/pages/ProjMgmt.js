@@ -34,10 +34,10 @@ function ProjMgmt() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/computerforensicsfundamentals"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/computerforensicsfundamentals"
-        ></NextButton>
       </div>
     </div>
     </>

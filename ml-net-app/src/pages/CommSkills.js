@@ -31,10 +31,10 @@ function CommSkills() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/datascience"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/datascience"
-        ></NextButton>
       </div>
     </div>
     </>

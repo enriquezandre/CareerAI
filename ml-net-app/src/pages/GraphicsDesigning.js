@@ -34,10 +34,10 @@ function GraphicsDesigning() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/roleresult"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/roleresult"
-        ></NextButton>
       </div>
     </div>
     </>

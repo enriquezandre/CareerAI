@@ -34,10 +34,10 @@ function DataScience() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/troubleshootingskills"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/troubleshootingskills"
-        ></NextButton>
       </div>
     </div>
     </>

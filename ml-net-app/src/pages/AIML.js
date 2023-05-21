@@ -25,20 +25,21 @@ function AIML() {
           <h3>Not sure about your skills? {'  '}
             <a href="https://www.linkedin.com/skill-assessments/Machine%20Learning/quiz-intro/" target="_blank" rel="noopener noreferrer" className="gradient-link">Assess yourself here!</a>
           </h3>
-          <div className='rating'>
-            <input
-              type="number"
-              ref={autoFocusRef}
-              value={values.aI_ML || ''} // Read the value from the context state
-              onChange={handleInputChange}
-              className="input-field"
-              placeholder="Enter rate here"
-            />
+            <div className='rating'>
+              <input
+                type="number"
+                ref={autoFocusRef}
+                value={values.aI_ML || ''} // Read the value from the context state
+                onChange={handleInputChange}
+                className="input-field"
+                placeholder="Enter rate here"
+              />
+              <div className='next'>
+              <NextButton link = "/softwareengineering"></NextButton>
+              </div>
           </div>
         </p>
-        <NextButton
-          link = "/softwareengineering"
-        ></NextButton>
+        
       </div>
     </div>
     </>

@@ -35,10 +35,10 @@ function DbFundamentals() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/computerarchitecture"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/computerarchitecture"
-        />
       </div>
     </div>
     </>

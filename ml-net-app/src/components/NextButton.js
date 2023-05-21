@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./GetStartedBtn.css";
+import "./NextButton.css";
 
 export const NextButton = (props) => {
   const {link} = props

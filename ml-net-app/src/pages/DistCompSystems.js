@@ -34,10 +34,10 @@ function DistCompSystems() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/cybersecurity"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/cybersecurity"
-        ></NextButton>
       </div>
     </div>
     </>

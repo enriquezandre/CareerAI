@@ -34,10 +34,10 @@ function Troubleshooting() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/graphicsdesigning"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/graphicsdesigning"
-        ></NextButton>
       </div>
     </div>
     </>

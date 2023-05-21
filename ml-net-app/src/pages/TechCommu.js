@@ -31,10 +31,10 @@ function TechCommu() {
               placeholder="Enter rate here"
             />
           </div>
+          <div className='next'>
+            <NextButton link = "/aimachinelearning"></NextButton>
+          </div>
         </p>
-        <NextButton
-          link = "/aimachinelearning"
-        ></NextButton>
       </div>
     </div>
     </>
