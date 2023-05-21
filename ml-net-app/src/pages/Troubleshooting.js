@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
-import { useNavigate } from 'react-router-dom';
 import { useAutoFocus } from '../components/useAutoFocus';
+import { NextButton } from '../components/NextButton';
 
 function Troubleshooting() {
   const { values, setValues } = useContext(ValuesContext);
-  const navigate = useNavigate();
   const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
@@ -14,7 +13,6 @@ function Troubleshooting() {
       ...prevValues,
       troubleshooting_skills: event.target.value,
     }));
-    navigate("/graphicsdesigning");
   };
   return (
     <>
@@ -37,6 +35,9 @@ function Troubleshooting() {
             />
           </div>
         </p>
+        <NextButton
+          link = "/graphicsdesigning"
+        ></NextButton>
       </div>
     </div>
     </>

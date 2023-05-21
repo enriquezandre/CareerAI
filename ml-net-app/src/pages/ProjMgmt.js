@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
-import { useNavigate } from 'react-router-dom';
 import { useAutoFocus } from '../components/useAutoFocus';
+import { NextButton } from '../components/NextButton';
 
 function ProjMgmt() {
   const { values, setValues } = useContext(ValuesContext);
-  const navigate = useNavigate();
   const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
@@ -14,7 +13,6 @@ function ProjMgmt() {
       ...prevValues,
       project_Management: event.target.value,
     }));
-    navigate("/computerforensicsfundamentals");
   };
   return (
     <>
@@ -37,6 +35,9 @@ function ProjMgmt() {
             />
           </div>
         </p>
+        <NextButton
+          link = "/computerforensicsfundamentals"
+        ></NextButton>
       </div>
     </div>
     </>

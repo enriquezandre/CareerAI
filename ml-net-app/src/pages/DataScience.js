@@ -1,12 +1,11 @@
 import { ValuesContext } from './ValuesContext'
-import { useNavigate } from 'react-router-dom';
 import React, { useContext } from 'react'
 import './Page.css'
 import { useAutoFocus } from '../components/useAutoFocus';
+import { NextButton } from '../components/NextButton';
 
 function DataScience() {
   const { values, setValues } = useContext(ValuesContext);
-  const navigate = useNavigate();
   const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
@@ -14,7 +13,6 @@ function DataScience() {
       ...prevValues,
       data_Science: event.target.value,
     }));
-    navigate("/troubleshootingskills");
   };
   return (
     <>
@@ -37,6 +35,9 @@ function DataScience() {
             />
           </div>
         </p>
+        <NextButton
+          link = "/troubleshootingskills"
+        ></NextButton>
       </div>
     </div>
     </>

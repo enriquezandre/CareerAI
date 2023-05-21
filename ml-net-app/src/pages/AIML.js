@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext' 
-import { useNavigate } from 'react-router-dom';
 import { useAutoFocus } from '../components/useAutoFocus';
+import { NextButton } from '../components/NextButton';
 
 function AIML() {
   const { values, setValues } = useContext(ValuesContext);
-  const navigate = useNavigate();
   const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
@@ -14,7 +13,6 @@ function AIML() {
       ...prevValues,
       aI_ML: event.target.value,
     }));
-    navigate("/softwareengineering");
   };
 
   return (
@@ -38,6 +36,9 @@ function AIML() {
             />
           </div>
         </p>
+        <NextButton
+          link = "/softwareengineering"
+        ></NextButton>
       </div>
     </div>
     </>
