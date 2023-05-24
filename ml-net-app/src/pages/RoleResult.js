@@ -127,7 +127,7 @@ function RoleResult({ value }) {
             <button className="show-result-button" onClick={handleEnter}>
               Show Result
             </button>
-            <button className="show-result-button" onClick={backToHome}>
+            <button className="backhome-button" onClick={backToHome}>
               Back to Home
             </button>
           </div>

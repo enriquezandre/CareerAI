@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext' 
-import { useNavigate } from 'react-router-dom';
 import { useAutoFocus } from '../components/useAutoFocus';
+import { NextButton } from '../components/NextButton';
 
 function CommSkills() {
   const { values, setValues } = useContext(ValuesContext);
-  const navigate = useNavigate();
   const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
@@ -14,7 +13,6 @@ function CommSkills() {
       ...prevValues,
       communication_skills: event.target.value,
     }));
-    navigate("/datascience");
   };
   return (
     <>
@@ -32,6 +30,9 @@ function CommSkills() {
               className="input-field"
               placeholder="Enter rate here"
             />
+          </div>
+          <div className='next'>
+            <NextButton link = "/datascience"></NextButton>
           </div>
         </p>
       </div>

@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
-import { useNavigate } from 'react-router-dom';
 import { useAutoFocus } from '../components/useAutoFocus';
+import { NextButton } from '../components/NextButton';
 
 function SoftDev() {
   const { values, setValues } = useContext(ValuesContext);
-  const navigate = useNavigate();
   const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
@@ -14,7 +13,6 @@ function SoftDev() {
       ...prevValues,
       software_Development: event.target.value,
     }));
-    navigate("/programmingskills");
   };
   return (
     <>
@@ -35,6 +33,9 @@ function SoftDev() {
               className="input-field"
               placeholder="Enter rate here"
             />
+          </div>
+          <div className='next'>
+            <NextButton link = "/programmingskills"></NextButton>
           </div>
         </p>
       </div>

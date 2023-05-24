@@ -70,6 +70,31 @@
     border-color: #FF00FF; 
     box-shadow: 0 0 5px #FF00FF;
   }
+
+  .backhome-button {
+    background: linear-gradient(to bottom right, #ffcc70, #c850c0, #4158d0);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 94px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Space Mono', monospace;
+  }
+  
+  .backhome-button:hover {
+    outline: none;
+    border-color: #FF00FF; 
+    box-shadow: 0 0 5px #FF00FF;
+  }
+  
+  .backhome-button:focus {
+    outline: none;
+    border-color: #FF00FF; 
+    box-shadow: 0 0 5px #FF00FF;
+  }
   
   .roletopic{
     display: flex;
@@ -117,4 +142,9 @@
     color: antiquewhite;
     font-family: 'Space Mono', monospace;
     font-size: 18px;
+  }
+
+  .next{
+    align-items: center;
+    padding: 70px;
   }

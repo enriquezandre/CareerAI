@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import './Page.css'
 import { ValuesContext } from './ValuesContext'
-import { useNavigate } from 'react-router-dom';
 import { useAutoFocus } from '../components/useAutoFocus';
+import { NextButton } from '../components/NextButton';
 
 function CompForensics() {
   const { values, setValues } = useContext(ValuesContext);
-  const navigate = useNavigate();
   const autoFocusRef = useAutoFocus();
 
   const handleInputChange = (event) => {
@@ -14,7 +13,6 @@ function CompForensics() {
       ...prevValues,
       computer_Forensics_Fundamentals: event.target.value,
     }));
-    navigate("/technicalcommunication");
   };
   return (
     <>
@@ -35,6 +33,9 @@ function CompForensics() {
               className="input-field"
               placeholder="Enter rate here"
             />
+          </div>
+          <div className='next'>
+            <NextButton link = "/technicalcommunication"></NextButton>
           </div>
         </p>
       </div>
